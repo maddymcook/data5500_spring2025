@@ -29,14 +29,13 @@ class DeckOfCards():
         random.shuffle(self.deck)
         self.play_idx = 0
         
-    def print_deck(self):
+
+    def print_deck(self, message="Deck:"):
+        print(message)
         for card in self.deck:
             print(card.face, "of", card.suit, end=", ")
-        print("---")
+        print("\n---")
         
     def get_card(self):
         self.play_idx += 1
         return self.deck[self.play_idx - 1]
-        
-        
-
